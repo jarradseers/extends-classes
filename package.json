@@ -1,0 +1,34 @@
+{
+  "name": "extends-classes",
+  "version": "1.0.0",
+  "engines" : {
+    "node" : ">=6.0.0"
+  },
+  "engineStrict": true,
+  "description": "Extend from multiple classes!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarradseers/extends-classes.git"
+  },
+  "keywords": [
+    "extends",
+    "extend",
+    "multiple",
+    "es6",
+    "classes",
+    "class"
+  ],
+  "author": "Jarrad Seers <jarrad@seers.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jarradseers/extends-classes/issues"
+  },
+  "homepage": "https://github.com/jarradseers/extends-classes#readme"
+}
