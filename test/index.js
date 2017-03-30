@@ -17,7 +17,7 @@
 const classes = require('../');
 
 class A {
-  constructor() {
+  constructor(options) {
     console.log('A class constructed');
   }
   one(hi) {
@@ -27,7 +27,7 @@ class A {
 }
 
 class B {
-  constructor() {
+  constructor(options) {
     console.log('B class constructed');
   }
   two() {
@@ -36,8 +36,8 @@ class B {
 }
 
 class C {
-  constructor() {
-    console.log('C class constructed');
+  constructor(options) {
+    console.log(`C class constructed with hello option ${options.hello}`);
   }
   three() {
     console.log(this.hi);
@@ -47,15 +47,23 @@ class C {
 
 class Test extends classes (A, B, C) {
 
-  constructor() {
-    super();
-    console.log('Test class constructed');
+  constructor(options) {
+    super(options);
+    this.options = options;
+    console.log(`Test class constructed with hello option '${options.hello}'`);
+  }
+
+  __call(method, args){
+    console.log(`Method is missing '${method}()'`)
   }
 
 }
 
-const test = new Test();
+const test = new Test({
+  hello: 'passed into constructor'
+});
 
-test.one('hi');
-test.two();
-test.three();
+test.one('p1m1', 'p2m1');
+test.two('p1m2', 'p2m2');
+test.three('p1m3', 'p2m3');
+test.nothing('p1m4', 'p2m4');

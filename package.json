@@ -1,8 +1,8 @@
 {
   "name": "extends-classes",
   "version": "1.0.2",
-  "engines" : {
-    "node" : ">=6.0.0"
+  "engines": {
+    "node": ">=6.0.0"
   },
   "engineStrict": true,
   "description": "Extend from multiple classes!",
@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/jarradseers/extends-classes/issues"
   },
-  "homepage": "https://github.com/jarradseers/extends-classes#readme"
+  "homepage": "https://github.com/jarradseers/extends-classes#readme",
+  "dependencies": {
+    "method-missing": "^1.1.2"
+  }
 }
