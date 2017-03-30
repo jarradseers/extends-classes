@@ -34,7 +34,7 @@ $ npm install extends-classes
 const many = require('extends-classes');
 
 class Test extends many (A, B, C) {
-    // class stuff.
+  // class stuff.
 }
 ```
 
