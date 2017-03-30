@@ -19,9 +19,10 @@ const classes = require('../');
 class A {
   constructor(options) {
     console.log('A class constructed');
+    this.fromInsideAConstructor = true;
   }
-  one(hi) {
-    console.log('One method called on A class');
+  one(info) {
+    console.log('One method called on A class', info);
     this.hi = 'Hello world!';
   }
 }
@@ -30,8 +31,11 @@ class B {
   constructor(options) {
     console.log('B class constructed');
   }
-  two() {
-    console.log('Two method called on B class');
+  two(info) {
+    console.log('Two method called on B class', info);
+  }
+  static hello() {
+    console.log('Hello from the static method on B');
   }
 }
 
@@ -39,9 +43,9 @@ class C {
   constructor(options) {
     console.log(`C class constructed with hello option ${options.hello}`);
   }
-  three() {
+  three(info) {
     console.log(this.hi);
-    console.log('Three method called on C class');
+    console.log('Three method called on C class', info);
   }
 }
 
@@ -67,3 +71,7 @@ test.one('p1m1', 'p2m1');
 test.two('p1m2', 'p2m2');
 test.three('p1m3', 'p2m3');
 test.nothing('p1m4', 'p2m4');
+
+B.hello();
+
+console.log(test.fromInsideAConstructor);
