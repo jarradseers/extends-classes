@@ -35,6 +35,6 @@
     "method-missing": "^1.1.2"
   },
   "devDependencies": {
-    "eslint": "^3.18.0"
+    "eslint": "^6.5.1"
   }
 }
