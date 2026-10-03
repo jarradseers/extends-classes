@@ -1,17 +1,18 @@
 {
   "name": "extends-classes",
-  "version": "1.0.6",
+  "version": "2.0.0",
+  "description": "Extend from multiple ES6 classes.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "engines": {
     "node": ">=6.0.0"
   },
-  "engineStrict": true,
-  "description": "Extend from multiple classes!",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "eslint . --fix && node test"
+    "lint": "eslint .",
+    "test": "eslint . && node --test test/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,8 @@
     "extends",
     "extend",
     "multiple",
+    "inheritance",
+    "mixin",
     "es6",
     "classes",
     "class"
@@ -32,9 +35,11 @@
   },
   "homepage": "https://github.com/jarradseers/extends-classes#readme",
   "dependencies": {
-    "method-missing": "^1.1.2"
+    "method-missing": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.18.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "globals": "^17.13.0"
   }
 }
